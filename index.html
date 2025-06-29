@@ -1,38 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تأثير زجاجي مثل أبل</title>
   <style>
+    /* تنسيقات عامة */
     body {
-      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+      background-size: cover;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+      overflow: hidden;
     }
-    
-    .glass-card {
+
+    /* تأثير الزجاج */
+    .glass {
       background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 15px;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+      padding: 30px;
       width: 300px;
       text-align: center;
-      transition: transform 0.3s;
+      color: white;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
-    
-    .glass-card:hover {
+
+    /* تأثير عند التحويم */
+    .glass:hover {
       transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* تأثير الحركة (مثل أبل) */
+    .glass:active {
+      transform: scale(0.95);
+    }
+
+    /* عناصر داخلية */
+    .glass h2 {
+      margin-top: 0;
+    }
+
+    /* زر إضافي */
+    .glass-button {
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .glass-button:hover {
+      background: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
-  <div class="glass-card">
-    <h2>مرحباً بك!</h2>
-    <p>هذا تأثير زجاجي جميل لموقعك.</p>
+  <div class="glass">
+    <h2>مرحباً بك! 👋</h2>
+    <p>هذا تأثير زجاجي مشابه لـ أبل. جرب الضغط عليّ!</p>
+    <button class="glass-button">اضغط هنا</button>
   </div>
+
+  <script>
+    // تأثيرات إضافية عند النقر (اختياري)
+    const glassElement = document.querySelector('.glass');
+    
+    glassElement.addEventListener('click', () => {
+      // تغيير لون الخلفية عشوائيًا (لمزيد من التفاعل)
+      const colors = ['rgba(255, 99, 71, 0.3)', 'rgba(147, 112, 219, 0.3)', 'rgba(60, 179, 113, 0.3)'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      glassElement.style.background = randomColor;
+    });
+  </script>
 </body>
 </html>
