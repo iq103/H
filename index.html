@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .glass-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h2>مرحباً بك!</h2>
+    <p>هذا تأثير زجاجي جميل لموقعك.</p>
+  </div>
+</body>
+</html>
